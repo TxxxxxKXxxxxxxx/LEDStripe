@@ -1,5 +1,6 @@
 package de.tk.mqtt;
 
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,14 +15,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final TextView result = (TextView) findViewById(R.id.result);
-        Button btnOn = (Button) findViewById(R.id.btnOn);
-        Button btnOff = (Button) findViewById(R.id.btnOff);
-        Button btnDown = (Button) findViewById(R.id.btnDown);
-        Button btnUp = (Button) findViewById(R.id.btnUp);
-        Button btnRed = (Button) findViewById(R.id.btnRed);
-        Button btnGreen = (Button) findViewById(R.id.btnGreen);
-        Button btnBlue = (Button) findViewById(R.id.btnBlue);
-        Button btnWhite = (Button) findViewById(R.id.btnWhite);
+        FloatingActionButton btnOn = (FloatingActionButton) findViewById(R.id.btnOn);
+        FloatingActionButton btnOff = (FloatingActionButton) findViewById(R.id.btnOff);
+        FloatingActionButton btnDown = (FloatingActionButton) findViewById(R.id.btnDown);
+        FloatingActionButton btnUp = (FloatingActionButton) findViewById(R.id.btnUp);
+        FloatingActionButton btnRed = (FloatingActionButton) findViewById(R.id.btnRed);
+        FloatingActionButton btnGreen = (FloatingActionButton) findViewById(R.id.btnGreen);
+        FloatingActionButton btnBlue = (FloatingActionButton) findViewById(R.id.btnBlue);
+        FloatingActionButton btnWhite = (FloatingActionButton) findViewById(R.id.btnWhite);
 
         btnOn.setOnClickListener(new View.OnClickListener() {
             @Override
