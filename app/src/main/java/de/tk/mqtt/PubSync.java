@@ -6,7 +6,7 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.MqttTopic;
 
 public class PubSync {
-    public static String doTest(String msg){
+    public static Boolean doTest(String msg){
         try {
             MqttClient client = new MqttClient("tcp://192.168.178.23:1883","java_client", null);
             MqttTopic topic = client.getTopic("LEDstripe");
@@ -20,8 +20,8 @@ public class PubSync {
             client.disconnect();
         } catch (Exception e) {
             e.printStackTrace();
-            return "failed";
+            return false;
         }
-        return "success";
+        return true;
     }
 }

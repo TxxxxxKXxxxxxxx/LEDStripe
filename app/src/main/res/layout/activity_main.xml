@@ -6,27 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TableLayout
-        android:layout_width="368dp"
-        android:layout_height="476dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="128dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/result">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center_horizontal">
 
@@ -35,46 +28,50 @@
                 android:id="@+id/btnUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:clickable="true"
                 android:tint="@android:color/white"
                 app:backgroundTint="@android:color/darker_gray"
-                app:srcCompat="@drawable/ic_arrow_upward_black_24dp"
-                android:layout_margin="10dp"/>
+                app:fabSize="normal"
+                app:srcCompat="@drawable/ic_arrow_upward_black_24dp" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/btnDown"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:clickable="true"
                 android:tint="@android:color/white"
                 app:backgroundTint="@android:color/darker_gray"
-                app:srcCompat="@drawable/ic_arrow_downward_black_24dp"
-                android:layout_margin="10dp"/>
+                app:fabSize="normal"
+                app:srcCompat="@drawable/ic_arrow_downward_black_24dp" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/btnOff"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:clickable="true"
                 android:tint="@android:color/white"
                 app:backgroundTint="@android:color/holo_red_dark"
-                app:srcCompat="@drawable/ic_power_settings_new_black_24dp"
-                android:layout_margin="10dp"/>
+                app:fabSize="normal"
+                app:srcCompat="@drawable/ic_power_settings_new_black_24dp" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/btnOn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:clickable="true"
                 android:tint="@android:color/white"
                 app:backgroundTint="@android:color/holo_green_light"
-                app:srcCompat="@drawable/ic_power_settings_new_black_24dp"
-                android:layout_margin="10dp"/>
+                app:fabSize="normal"
+                app:srcCompat="@drawable/ic_power_settings_new_black_24dp" />
 
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center_horizontal">
 
@@ -86,7 +83,8 @@
                 android:layout_margin="10dp"
                 android:clickable="true"
                 android:tint="@android:color/white"
-                app:backgroundTint="@android:color/holo_red_dark" />
+                app:backgroundTint="@color/R0"
+                app:fabSize="normal" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/btnGreen"
@@ -95,7 +93,8 @@
                 android:layout_margin="10dp"
                 android:clickable="true"
                 android:tint="@android:color/white"
-                app:backgroundTint="@android:color/holo_green_light" />
+                app:backgroundTint="@color/G0"
+                app:fabSize="normal" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/btnBlue"
@@ -104,19 +103,240 @@
                 android:layout_margin="10dp"
                 android:clickable="true"
                 android:tint="@android:color/white"
-                app:backgroundTint="@color/design_default_color_primary_dark" />
+                app:backgroundTint="@color/B0"
+                app:fabSize="normal" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/btnWhite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:clickable="true"
                 android:tint="@android:color/white"
                 app:backgroundTint="@android:color/white"
-                android:layout_margin="10dp"/>
+                app:fabSize="normal" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnRed1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:tint="@android:color/white"
+                app:backgroundTint="@color/R1"
+                app:fabSize="normal" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnGreen1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:tint="@android:color/white"
+                app:backgroundTint="@color/G1"
+                app:fabSize="normal" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnBlue1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:tint="@android:color/white"
+                app:backgroundTint="@color/B1"
+                app:fabSize="normal" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnFlash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:tint="@android:color/white"
+                app:backgroundTint="@android:color/darker_gray"
+                app:fabSize="normal" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            tools:layout_editor_absoluteX="192dp"
+            tools:layout_editor_absoluteY="143dp">
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnRed2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:tint="@android:color/white"
+                app:backgroundTint="@color/R2"
+                app:fabSize="normal" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnGreen2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:tint="@android:color/white"
+                app:backgroundTint="@color/G2"
+                app:fabSize="normal" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnBlue2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:tint="@android:color/white"
+                app:backgroundTint="@color/B2"
+                app:fabSize="normal" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnStrobe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:tint="@android:color/white"
+                app:backgroundTint="@android:color/darker_gray"
+                app:fabSize="normal" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnRed3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:tint="@android:color/white"
+                app:backgroundTint="@color/R3"
+                app:fabSize="normal" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnGreen3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:tint="@android:color/white"
+                app:backgroundTint="@color/G3"
+                app:fabSize="normal" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnBlue3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:tint="@android:color/white"
+                app:backgroundTint="@color/B3"
+                app:fabSize="normal" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnFade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:tint="@android:color/white"
+                app:backgroundTint="@android:color/darker_gray"
+                app:fabSize="normal" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnRed4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:tint="@android:color/white"
+                app:backgroundTint="@color/R4"
+                app:fabSize="normal" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnGreen4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:tint="@android:color/white"
+                app:backgroundTint="@color/G4"
+                app:fabSize="normal" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnBlue4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:tint="@android:color/white"
+                app:backgroundTint="@color/B4"
+                app:fabSize="normal" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnSmooth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:tint="@android:color/white"
+                app:backgroundTint="@android:color/darker_gray"
+                app:fabSize="normal" />
 
         </TableRow>
 
     </TableLayout>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="◉"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@android:color/transparent"
+        android:tint="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_settings_black_24dp" />
 
 </android.support.constraint.ConstraintLayout>
