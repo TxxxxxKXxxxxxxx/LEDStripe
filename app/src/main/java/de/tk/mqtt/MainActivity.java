@@ -42,13 +42,13 @@ public class MainActivity extends AppCompatActivity {
 
                 final EditText input = new EditText(MainActivity.this);
                 input.setHint("IP-Adresse");
-                input.setText(getPreferences(MODE_PRIVATE).getString("IPAdress", ""));
+                input.setText(getPreferences(MODE_PRIVATE).getString("IPAddress", ""));
                 builder.setView(input);
 
                 builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                         getPreferences(MODE_PRIVATE).edit().putString("IPAdress", input.getText().toString()).commit();
+                         getPreferences(MODE_PRIVATE).edit().putString("IPAddress", input.getText().toString()).commit();
                     }
                 });
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         btnOn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (PubSync.doTest("ON") == false)
+                if (PubSync.doTest("ON", MainActivity.this) == false)
                     result.setTextColor(getColor(android.R.color.holo_red_light));
                 else
                     result.setTextColor(getColor(android.R.color.holo_green_light));
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         btnOff.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (PubSync.doTest("OFF") == false)
+                if (PubSync.doTest("OFF", MainActivity.this) == false)
                     result.setTextColor(getColor(android.R.color.holo_red_light));
                 else
                     result.setTextColor(getColor(android.R.color.holo_green_light));
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         btnDown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (PubSync.doTest("DOWN") == false)
+                if (PubSync.doTest("DOWN", MainActivity.this) == false)
                     result.setTextColor(getColor(android.R.color.holo_red_light));
                 else
                     result.setTextColor(getColor(android.R.color.holo_green_light));
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         btnUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (PubSync.doTest("UP") == false)
+                if (PubSync.doTest("UP", MainActivity.this) == false)
                     result.setTextColor(getColor(android.R.color.holo_red_light));
                 else
                     result.setTextColor(getColor(android.R.color.holo_green_light));
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         btnRed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (PubSync.doTest("R0") == false)
+                if (PubSync.doTest("R0", MainActivity.this) == false)
                     result.setTextColor(getColor(android.R.color.holo_red_light));
                 else
                     result.setTextColor(getColor(android.R.color.holo_green_light));
@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         btnGreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (PubSync.doTest("G0") == false)
+                if (PubSync.doTest("G0", MainActivity.this) == false)
                     result.setTextColor(getColor(android.R.color.holo_red_light));
                 else
                     result.setTextColor(getColor(android.R.color.holo_green_light));
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         btnBlue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (PubSync.doTest("B0") == false)
+                if (PubSync.doTest("B0", MainActivity.this) == false)
                     result.setTextColor(getColor(android.R.color.holo_red_light));
                 else
                     result.setTextColor(getColor(android.R.color.holo_green_light));
@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
         btnWhite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (PubSync.doTest("W") == false)
+                if (PubSync.doTest("W", MainActivity.this) == false)
                     result.setTextColor(getColor(android.R.color.holo_red_light));
                 else
                     result.setTextColor(getColor(android.R.color.holo_green_light));
